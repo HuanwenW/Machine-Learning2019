@@ -30,13 +30,22 @@
 > 对分类器进行训练,再利用验证集来测试训练得到的模型,以此来做为评价分类器的性能指标。
 ## 2.线性回归的原理
 **定义：** 线性回归在假设特证满足线性关系，根据给定的训练数据训练一个模型，并用此模型进行预测。
-## 3.线性回归损失函数、代价函数、目标函数
+## 3.[线性回归的损失函数代价函数目标函数](https://blog.csdn.net/lyl771857509/article/details/79428475)
+损失函数（Loss Function ）是定义在单个样本上的，算的是一个样本的误差。
+代价函数（Cost Function ）是定义在整个训练集上的，是所有样本误差的平均，也就是损失函数的平均。
+目标函数（Object Function）定义为：最终需要优化的函数。等于经验风险+结构风险（也就是Cost Function + 正则化项）。
+
 ## 4.优化方法
-- 梯度下降法
-- 牛顿法
-- 拟牛顿法
-## 5.线性回归的评估指标
+- [梯度下降法](https://www.jianshu.com/p/c7e642877b0e)
+- [牛顿法](https://blog.csdn.net/ccnt_2012/article/details/81837154)
+- [拟牛顿法](https://blog.csdn.net/chunyun0716/article/details/54999799)
+## 5.[线性回归的评估指标](https://blog.csdn.net/faithmy509/article/details/81217417)
+
 ## 6.sklearn参数详解
+clf是不同的分类器，可以是任何的分类器。比如支持向量机分类器。clf = svm.SVC(kernel=’linear’, C=1) 
+cv参数就是代表不同的cross validation的方法了。如果cv是一个int数字的话，并且如果提供了raw target参数，那么就代表使用StratifiedKFold分类方式，如果没有提供raw target参数，那么就代表使用KFold分类方式。 
+cross_val_score函数的返回值就是对于每次不同的的划分raw data时，在test data上得到的分类的准确率。至于准确率的算法可以通过score_func参数指定，如果不指定的话，是用clf默认自带的准确率算法。
+
 ### 参考资料
 1. 周志华《机器学习》西瓜书
 2. 李航《统计学》
