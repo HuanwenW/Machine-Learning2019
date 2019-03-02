@@ -2,7 +2,7 @@
 方法 | 自变量（特征） | 因变量（结果） | 关系 | 一般表达式 | 
 :-: |:-: |:-: |:-:|:-:|
 linear | 连续或离散 | 连续实数 | 线性 | f(x) = wx<sub>i</sub> + b 
-Logistic | 连续或离散 | （0,1）之间连续值 | 非线性 |![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+e^-z})
+Logistic | 连续或离散 | （0,1）之间连续值 | 非线性 |![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+e^-^z})
 ## 2. 逻辑回归原理
 ## 3. 逻辑回归损失函数推倒及优化
 ## 4. 正则化与模型评估指标
